@@ -1,44 +1,85 @@
-pip install django	- install file to someware
+# Django Setup and Workflow
 
-pipenv install django	- install file to project folder	# best way
+## Installing Django
 
+### Option 1: Using `pip`
+```bash
+pip install django  # Installs Django globally
+```
 
-# setps to setup pipenv
-	pip install pipenv
-		pip show pipenv
-		pipenv --version
+### Option 2: Using `pipenv` (Recommended)
+```bash
+pipenv install django  # Installs Django in the project folder
+```
 
+## Setting Up `pipenv`
 
-# activate virtual environment
-pipenv shell
+1. Install `pipenv`:
+   ```bash
+   pip install pipenv
+   ```
 
+2. Verify installation:
+   ```bash
+   pip show pipenv
+   pipenv --version
+   ```
 
-# to start project
-django-admin	 show commands
-django-admin startproject storefront .
+3. Activate the virtual environment:
+   ```bash
+   pipenv shell
+   ```
 
+## Starting a Django Project
 
-# to run project
-python manage.py	# show commands
-python manage.py runserver 		# run server
-python manage.py runserver 7000 	# run with custom port number
+1. View available Django admin commands:
+   ```bash
+   django-admin
+   ```
 
-# set python interpreter as project directory virtual environment
-Ctrl + P
->pyhton interpreter
-copy current path using `pipenv --venv` 
-select `enter interpreter path` paste it  with + \Scripts\python.exe
-	eg: C:\Users\charith\.virtualenvs\storefront-JshKXDAk\Scripts\python.exe
+2. Start a new Django project:
+   ```bash
+   django-admin startproject storefront .
+   ```
 
-# vs code tricks
-Ctrl + `	- open terminal
-Ctrl + L	- clear terminal
+3. Run the Django project:
+   ```bash
+   python manage.py runserver  # Runs on the default port (8000)
+   python manage.py runserver 7000  # Runs on a custom port (7000)
+   ```
 
-# create app
-python manage.py startapp playground
+## Setting Python Interpreter in VS Code
 
-*migration folder* generating database tables
-*admin.py* how admin interface looks like
-*apps.py* config app
-*models.py* define model classes and pull up data from DB and present to user
-*views.py* request -> response, request handler
+1. Find the virtual environment path:
+   ```bash
+   pipenv --venv
+   ```
+
+2. Copy the path and append `\Scripts\python.exe` (e.g., `C:\Users\charith\.virtualenvs\storefront-JshKXDAk\Scripts\python.exe`).
+
+3. Set the Python interpreter in VS Code:
+   - Press `Ctrl + P`.
+   - Search for `Python: Select Interpreter`.
+   - Choose `Enter Interpreter Path` and paste the path.
+
+## VS Code Terminal Shortcuts
+
+- Open terminal: `Ctrl + `
+- Clear terminal: `Ctrl + L`
+
+## Creating a Django App
+
+1. Create a new app:
+   ```bash
+   python manage.py startapp playground
+   ```
+
+2. Key files and their purposes:
+
+   - **`migrations/`**: Tracks and applies database migrations (e.g., generating database tables).
+   - **`admin.py`**: Customizes the Django admin interface.
+   - **`apps.py`**: Configures the app.
+   - **`models.py`**: Defines model classes to interact with the database.
+   - **`views.py`**: Handles requests and returns responses.
+
+---
