@@ -64,8 +64,8 @@ pipenv install django  # Installs Django in the project folder
 
 ## VS Code Terminal Shortcuts
 
-- Open terminal: `Ctrl + `
-- Clear terminal: `Ctrl + L`
+- Open terminal: Ctrl + ` or J 
+- Clear terminal: Ctrl + L
 
 ## Creating a Django App
 
