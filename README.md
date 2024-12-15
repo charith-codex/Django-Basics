@@ -12,6 +12,12 @@ pip install django  # Installs Django globally
 pipenv install django  # Installs Django in the project folder
 ```
 
+### Create a virtual environment named env using Python and activate it in the current PowerShell session.
+```bash
+python -m venv env
+env\Scripts\activate
+```
+
 ## Setting Up `pipenv`
 
 1. Install `pipenv`:
